@@ -8,7 +8,6 @@ from alert import Alert
 def main():
     data = rest.get_floods()
     alert_list = []
-	fmtdate = datetime.datetime.now().strftime('%c')
 
     for i in range(len(data["items"])):
         level = data["items"][i]["severityLevel"]
@@ -22,5 +21,6 @@ def main():
         alert = Alert(level, river_sea, county, region, message, polygon)
         alert_list.append(alert)
 
-    
+    fmtdate = datetime.datetime.now().strftime('%c')
+	
     return render_template('alert.html', alerts = alert_list, fmtdate = fmtdate)
