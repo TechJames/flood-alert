@@ -103,12 +103,40 @@ ul {
             color: black
     }
 
+    #fixed_bar a:link {
+        text-decoration: none;
+    }
+
+    #fixed_bar a:visited {
+        text-decoration: none;
+    }
+
+    #fixed_bar a:hover {
+        text-decoration: none;
+    }
+
+    #fixed_bar a:active {
+        text-decoration: none;
+    }
+
 .wrapper {
     position: relative;
     left: 30px;
     margin: 0px auto;
     height: 50px;
     text-align: left;
+    overflow: hidden;
+}
+
+.wrapper_left {
+    float: left;
+    width: 90%;
+    overflow: hidden;
+}
+
+.wrapper_right {
+    float: left;
+    overflow: hidden;
 }
 
 .wrapper h1 {
